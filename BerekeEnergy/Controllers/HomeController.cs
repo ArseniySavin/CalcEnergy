@@ -17,6 +17,7 @@ namespace BerekeEnergy.Controllers
         {
             ViewBag.Message = "Your application description page.";
 
+
             return View();
         }
 
