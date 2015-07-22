@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BerekeEnergy", "BerekeEnergy\BerekeEnergy.csproj", "{82EE69D7-EFD2-4190-A3BA-33C644ED30A9}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "BerekeEnergy_DB", "BerekeEnergy_DB\BerekeEnergy_DB.sqlproj", "{E48ED33D-8B16-40A4-BBD7-70B03B657278}"
+EndProject
+Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "BerekeEnergy_LSJ.HTMLClient", "BerekeEnergy_LSJ\BerekeEnergy_LSJ.HTMLClient\BerekeEnergy_LSJ.HTMLClient.jsproj", "{461C8AFD-19A1-43A8-9A40-F8D2AF0A010D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BerekeEnergy_LSJ.Server", "BerekeEnergy_LSJ\BerekeEnergy_LSJ.Server\BerekeEnergy_LSJ.Server.csproj", "{6343E3E7-CFE8-4923-8032-20981616011B}"
+EndProject
+Project("{581633EB-B896-402F-8E60-36F3DA191C85}") = "BerekeEnergy_LSJ", "BerekeEnergy_LSJ\BerekeEnergy_LSJ.lsxtproj", "{8D67D9E8-6FAB-4080-98B6-FE278D4492CB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{82EE69D7-EFD2-4190-A3BA-33C644ED30A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82EE69D7-EFD2-4190-A3BA-33C644ED30A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82EE69D7-EFD2-4190-A3BA-33C644ED30A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82EE69D7-EFD2-4190-A3BA-33C644ED30A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E48ED33D-8B16-40A4-BBD7-70B03B657278}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E48ED33D-8B16-40A4-BBD7-70B03B657278}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E48ED33D-8B16-40A4-BBD7-70B03B657278}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{E48ED33D-8B16-40A4-BBD7-70B03B657278}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E48ED33D-8B16-40A4-BBD7-70B03B657278}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E48ED33D-8B16-40A4-BBD7-70B03B657278}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{461C8AFD-19A1-43A8-9A40-F8D2AF0A010D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{461C8AFD-19A1-43A8-9A40-F8D2AF0A010D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{461C8AFD-19A1-43A8-9A40-F8D2AF0A010D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{461C8AFD-19A1-43A8-9A40-F8D2AF0A010D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6343E3E7-CFE8-4923-8032-20981616011B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6343E3E7-CFE8-4923-8032-20981616011B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6343E3E7-CFE8-4923-8032-20981616011B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6343E3E7-CFE8-4923-8032-20981616011B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D67D9E8-6FAB-4080-98B6-FE278D4492CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D67D9E8-6FAB-4080-98B6-FE278D4492CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D67D9E8-6FAB-4080-98B6-FE278D4492CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D67D9E8-6FAB-4080-98B6-FE278D4492CB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
