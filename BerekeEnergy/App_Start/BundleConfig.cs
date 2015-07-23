@@ -23,9 +23,23 @@ namespace BerekeEnergy
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/_BerekeEnergy").Include(
+                      "~/Scripts/_BerekeEnergy.js"
+                      ));
+
+            bundles.Add(new ScriptBundle("~/bundles/dataTables").Include(
+                      "~/Scripts/DataTables/jquery.dataTables.min.js",
+                      "~/Scripts/DataTables/dataTables.tableTools.min.js",
+                      "~/Scripts/DataTables/dataTables.editor.min.js"
+                      ));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/site.css",
+                      "~/Content/DataTables/css/jquery.dataTables.min.css",
+                      "~/Content/DataTables/css/dataTables.tableTools.min.css",
+                      "~/Content/DataTables/css/dataTables.editor.min.css"
+                      ));
         }
     }
 }

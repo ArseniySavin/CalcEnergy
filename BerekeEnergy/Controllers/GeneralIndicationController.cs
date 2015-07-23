@@ -2,13 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Helpers;
 using System.Web.Mvc;
+using BerekeEnergy.Data_Layer;
 using BerekeEnergy.Models;
 
 namespace BerekeEnergy.Controllers
 {
     public class GeneralIndicationController : Controller
     {
+        DataAdapter da = DependencyResolver.Current.GetService<DataAdapter>();
+
         // GET: GeneralIndication
         public ActionResult GeneralIndex()
         {
@@ -87,36 +91,41 @@ namespace BerekeEnergy.Controllers
             }
         }
 
-        //public ActionResult GenIndAjaxHandler(jQueryDataTableParamModel param)
-        //{
-        //    //var allCompanies = da.IBANValidation();
+        public JsonResult GenIndAjaxHandler(jQueryDataTableParamModel param)
+        {
+            var allCompanies = da.GetAllTypeDevice();
 
-        //    var result = from c in allCompanies
-        //                 select new[] { 
-        //        Convert.ToString(c.Id), 
-        //        c.loan_contract_number, 
-        //        c.Receiver.national_id, 
-        //        c.Receiver.name,
-        //        c.amount.Value.ToString(),
-        //        c.Receiver.bank_bin, 
-        //        c.Receiver.bank_code, 
-        //        c.Receiver.account_number,
-        //        c.Receiver.bank_transit_acc_nb, 
-        //        c.value_date.Value.ToString("dd.MM.yyyy"), 
-        //        c.z_chanel_type, 
-        //        c.operation_type,
-        //        c.z_branch, 
-        //        c.z_user_cl
-        //    };
+            var result = from c in allCompanies
+                         select new DTypeDeviceModel { 
+                
+                    Id = c.Id, 
+                    code = c.code, 
+                    name = c.name
+            };
 
-        //    return Json(new
-        //    {
-        //        sEcho = param.sEcho,
-        //        aaData = result,
-        //        iTotalRecords = allCompanies.Count(),
-        //        iTotalDisplayRecords = param.iDisplayLength
-        //    },
-        //                JsonRequestBehavior.AllowGet);
-        //}
+            return Json(new
+            {
+                data = result
+            }, JsonRequestBehavior.AllowGet);
+        }
+
+        public ActionResult GenIndAjaxHandler2(DTypeDeviceModel data)
+        {
+            var allCompanies = da.GetAllTypeDevice();
+
+            var result = from c in allCompanies
+                         select new DTypeDeviceModel
+                         {
+
+                             Id = c.Id,
+                             code = c.code,
+                             name = c.name
+                         };
+
+            return Json(new
+            {
+                data = result
+            }, JsonRequestBehavior.AllowGet);
+        }
     }
 }

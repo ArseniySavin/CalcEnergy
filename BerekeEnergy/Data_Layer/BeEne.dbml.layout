@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="BeEne">
+  <DataContextMoniker Name="/BeEneDataContext" />
+  <nestedChildShapes>
+    <classShape Id="cf8eb4a4-cd12-4000-9de1-40e412d2798a" absoluteBounds="3.5, 0.875, 2, 1.9631982421875">
+      <DataClassMoniker Name="/BeEneDataContext/d_device" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4739de0d-9efc-48e3-ac93-f38d60ccdfd5" absoluteBounds="3.515, 1.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5fe9ffbf-89a5-467c-83a3-a7a6d278d84e" absoluteBounds="0.75, 3.875, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/BeEneDataContext/d_tariff" />
+      <nestedChildShapes>
+        <elementListCompartment Id="51db3f92-3322-4d00-bd3f-089250b22eda" absoluteBounds="0.765, 4.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ea0b6e0a-89d6-4b31-aec6-594eaf348710" absoluteBounds="0.75, 1.25, 2, 1.3862939453125">
+      <DataClassMoniker Name="/BeEneDataContext/d_type_device" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7ca94945-cd32-4be2-89a1-11681951f480" absoluteBounds="0.765, 1.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1c1c3ec0-e5ab-43c7-a21f-5ebec1a48b3d" absoluteBounds="3.75, 3.75, 2, 3.8862125651041666">
+      <DataClassMoniker Name="/BeEneDataContext/v_testimony" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ffe4a4b6-f9e6-46a9-be13-837879ee9c03" absoluteBounds="3.765, 4.21, 1.9700000000000002, 3.3262125651041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 3.875); (3.125 : 3.5); (3.125 : 1.85659912109375); (3.5 : 1.85659912109375)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/BeEneDataContext/d_tariff/d_tariff_d_device" />
+      <nodes>
+        <classShapeMoniker Id="5fe9ffbf-89a5-467c-83a3-a7a6d278d84e" />
+        <classShapeMoniker Id="cf8eb4a4-cd12-4000-9de1-40e412d2798a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 2.30894653320312); (3.04166666666667 : 2.30894653320312 : JumpStart); (3.20833333333333 : 2.30894653320312 : JumpEnd); (3.5 : 2.30894653320312)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/BeEneDataContext/d_type_device/d_type_device_d_device" />
+      <nodes>
+        <classShapeMoniker Id="ea0b6e0a-89d6-4b31-aec6-594eaf348710" />
+        <classShapeMoniker Id="cf8eb4a4-cd12-4000-9de1-40e412d2798a" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

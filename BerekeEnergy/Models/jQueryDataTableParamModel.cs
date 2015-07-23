@@ -43,4 +43,10 @@ namespace BerekeEnergy.Models
         /// </summary>
         public string sColumns { get; set; }
     }
+
+    public class TDC
+    {
+        public int value { get; set; }
+        public string label { get; set; }
+    }
 }

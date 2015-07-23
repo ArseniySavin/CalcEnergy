@@ -5,10 +5,9 @@ using System.Web;
 
 namespace BerekeEnergy.Models
 {
-    public class DTypeDevice
+    public class DTypeDeviceModel
     {
     public int Id { get; set; }	
-	public int device_id { get; set; }
 	public string code { get; set; }
     public string name { get; set; }
 

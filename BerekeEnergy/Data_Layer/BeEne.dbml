@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BKEnergy" Class="BeEneDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=(localdb)\V12.0;Initial Catalog=BKEnergy;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="BKEnergyConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.d_device" Member="d_devices">
+    <Type Name="d_device">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="code" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="coefficient" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="device_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tariff_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="d_tariff_d_device" Member="d_tariff" ThisKey="tariff_Id" OtherKey="Id" Type="d_tariff" IsForeignKey="true" />
+      <Association Name="d_type_device_d_device" Member="d_type_device" ThisKey="device_id" OtherKey="Id" Type="d_type_device" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.d_tariff" Member="d_tariffs">
+    <Type Name="d_tariff">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="tariff_1" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="tariff_2" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="tariff_3" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="tariff_4" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="code" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Association Name="d_tariff_d_device" Member="d_devices" ThisKey="Id" OtherKey="tariff_Id" Type="d_device" />
+    </Type>
+  </Table>
+  <Table Name="dbo.d_type_device" Member="d_type_devices">
+    <Type Name="d_type_device">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="code" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Association Name="d_type_device_d_device" Member="d_devices" ThisKey="Id" OtherKey="device_id" Type="d_device" />
+    </Type>
+  </Table>
+  <Table Name="dbo.v_testimony" Member="v_testimonies">
+    <Type Name="v_testimony">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="general_T" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="tt_1" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="tt_cof_1" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="amount_tt_cof_1" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="tt_2" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="tt_Cof_2" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="amount_tt_cof_2" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="tt_3" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="tt_cof_3" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="amount_tt_cof_3" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="tt_4" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="tt_cof_4" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="amount_tt_cof_4" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="total" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="date_of_testimony" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>
